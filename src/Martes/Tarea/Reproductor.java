@@ -5,27 +5,33 @@
  */
 package Martes.Tarea;
 
-import java.io.File;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import java.io.*;
+import sun.audio.*;
 
 
 public class Reproductor {
      
     public static void main(String[] args) {
-        try{
-
-           Clip sonido = AudioSystem.getClip();
-            File a = new File("C:\\sonidos\\AmorEterno.wav");
-            System.out.println(a);
-            sonido.open(AudioSystem.getAudioInputStream(a));
-            //sonido.open(AudioSystem.getAudioInputStream(a);
-            sonido.start();
-            System.out.println("Reproduciendo 10s. de sonido...");
-            Thread.sleep(1000); // 1000 milisegundos (10 segundos)
-            sonido.close();
-        }catch (Exception tipoerror) {
-            System.out.println("" + tipoerror);
-        }
+       try
+       {
+           //String song="AmorEterno.wav";
+           String song="C:\\sonidos\\AmorEterno.wav";
+           System.out.println(song);
+           InputStream in = new FileInputStream(song);
+           System.out.println("dos");
+           AudioStream audios=new AudioStream(in);
+           System.out.println("3");
+           AudioPlayer.player.start(audios);
+           System.out.println(audios);
+       }catch (Exception e){};
+  
     }
 }
+        
+
+/*try{
+String cad = new String("C:\\sonidos\\AmorEterno.wav");
+ProcessBuilder p=new ProcessBuilder("cmd.exe","/c","start",cad);
+p.start();
+}catch(Exception e) {}*/
+
