@@ -1,29 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Martes.Tarea;
 
-import java.io.*;
-import sun.audio.*;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+import  java.io.IOException;
 
 
 public class Reproductor {
      
-    public static void main(String[] args) {
-       try
-       {
+    public static void main(String[] args) throws IOException{
+
            //String song="AmorEterno.wav";
-           String song="C:\\sonidos\\AmorEterno.wav";
-           System.out.println(song);
-           InputStream in = new FileInputStream(song);
-           System.out.println("dos");
-           AudioStream audios=new AudioStream(in);
-           System.out.println("3");
-           AudioPlayer.player.start(audios);
-           System.out.println(audios);
-       }catch (Exception e){};
+           String song="cancion2.wav";
+           
+           InputStream in = new FileInputStream("buenosdias.wav");
+           AudioStream as=new AudioStream(in);
+           
+           AudioPlayer.player.start(as);
+ 
   
     }
 }
