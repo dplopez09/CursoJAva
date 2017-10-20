@@ -28,6 +28,7 @@ public class LoadMusic extends Thread{
             display("John Newman.jpg");
             System.out.println("Muestra Imagen");
             Thread.sleep(5000);
+            
         }catch(InterruptedException ie){
             System.out.println(ie);
         }
@@ -54,11 +55,22 @@ public class LoadMusic extends Thread{
            
            AudioPlayer.player.start(as);
     }*/
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args)throws IOException, InterruptedException {
         LoadMusic t1= new LoadMusic();
         t1.start();
-        Hola t=new Hola();
-        t.PlayMusic("losing.wav");
-        //t.PlayMusic("John Newman.wav");
+        
+        Thread audio=new Thread(){
+            public void run(){
+                Hola ad= new Hola();
+                try {
+                    ad.PlayMusic("John Newman.wav");
+                } catch (IOException ex) {
+                    Logger.getLogger(LoadMusic.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        };
+        audio.start();
+        audio.sleep(1);
+        //t.PlayMusic(""");
     }
 }

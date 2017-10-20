@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Jueves;
+package javaadvanced.Concierto.ClaseAnonima;
+import Jueves.*;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import  java.io.IOException;
 
-public class Hola {
+public class Audio {
     String song;
     /*public static void main(String[] args) throws IOException{
         PlayMusic("buenosdias.wav");

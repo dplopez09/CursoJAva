@@ -58,17 +58,17 @@ public class Presentador extends Acciones{
         
         String cancion = a.getNombre().trim() + ".wav";
         try{
-            /*InputStream in = new FileInputStream(cancion);
+            InputStream in = new FileInputStream(cancion);
             AudioStream as=new AudioStream(in);
          
-            AudioPlayer.player.start(as);*/
+            AudioPlayer.player.start(as);
          
-            Clip sonido = AudioSystem.getClip();
+            /*Clip sonido = AudioSystem.getClip();
             File file = new File(cancion);
             sonido.open(AudioSystem.getAudioInputStream(file));
             sonido.start();
             Thread.sleep(10000); 
-            sonido.close();
+            sonido.close();*/
         }catch(Exception e){
             System.out.println("" + e);
         }
