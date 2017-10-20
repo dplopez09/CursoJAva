@@ -51,10 +51,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 How many contributors, and links to their githubs.  
 
 List of your main contributors
-  * Jorge Arturo astorga645 [contributors] (https://github.com/astorga645)
-  * Aracely Ureña AracelyUrena [contributors] (https:/github.com/AracelyUrena)
-  * Marco Cardenas MarcoCardenasM [contributors] (https:/github.com/MarcoCardenasM)
-  * Dennis Lopez dplopez09 [contributors] (https:/github.com/dplopez09)
+  * Jorge Arturo @astorga645 [contributors] (https://github.com/astorga645)
+  * Aracely Ureña @AracelyUrena [contributors] (https:/github.com/AracelyUrena)
+  * Marco Cardenas @MarcoCardenasM [contributors] (https:/github.com/MarcoCardenasM)
+  * Dennis Lopez @dplopez09 [contributors] (https:/github.com/dplopez09)
 
 ## License
 
